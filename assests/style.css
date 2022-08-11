@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*body {
+  background-image: url(/assests/images/baku-azerbaydzhan-noch-baku-4750.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+*/
+
+.slides{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background: black;
+}
+.slides::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    background-color: rgb(0 0 0 / 50%);
+}
+.slide{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    animation: cycle 6s infinite;
+}
+.slide-2 {
+    animation-delay: 3s;
+}
+.slide-3 {
+    animation-delay: 3s;
+}
+.slide-4 {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    animation: cycle-1 10s infinite;
+}
+.slide-image{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+@keyframes cycle {
+    0% {opacity: 0; }
+    10% {opacity: 1; }
+    20% {opacity: 1; transform: scale(1.05); }
+    30% {opacity: 1; transform: scale(1.05); }
+    100% {opacity: 0; }
+}
+@keyframes cycle-1 {
+    0% {opacity: 0; }
+    10% {opacity: 1; }
+    20% {opacity: 1; transform: scale(1.05); }
+    30% {opacity: 1; transform: scale(1.05); }
+    100% {opacity: 0; }
+}
+
+
+.app {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  margin-top: -42rem;
+    position: relative;
+    z-index: 20;
+}
+.header {
+    padding: 27px 20px 0px 20px;
+    margin-bottom: -19px;
+}
+#weather{
+    background-color: rgba(0,0,0,.5);
+    height: 100vh;
+}
+.header h1 {
+  color: #fbb034;
+  font-size: 63px;
+  text-shadow: 0px 3px firebrick;
+}
+.header input {
+  width: 100%;
+  padding: 10px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #fbb034;
+  margin-bottom: 43px;
+  text-align: center;
+  color: white;
+  margin-top: 28px;
+}
+.content .city{
+    font-size: 33px;
+    margin-bottom: 3px;
+    font-weight: 600;
+}
+.content .temp{
+    font-size: 90px;
+    margin-bottom: -13px;
+    font-weight: 700;
+
+}
+.content .desc{
+    font-size: 25px;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+.content .minmax{
+    font-size: 24px;
+}
+
